@@ -171,7 +171,7 @@ If the new path's directories does not exist, create them."
 (pixel-scroll-precision-mode)                         ; Smooth scrolling
 
 ;; Use common keystrokes by default
-(cua-mode)
+;; (cua-mode)  ;; disable cua-mode since ctrl-v conflicts with vim keybindings
 
 ;; For terminal users, make the mouse more useful
 
@@ -228,10 +228,13 @@ If the new path's directories does not exist, create them."
 
 ;; UI/UX enhancements mostly focused on minibuffer and autocompletion interfaces
 ;; These ones are *strongly* recommended!
-;(load-file (expand-file-name "extras/base.el" user-emacs-directory))
+(load-file (expand-file-name "extras/base.el" user-emacs-directory))
 
 ;; Packages for software development
 (load-file (expand-file-name "extras/dev.el" user-emacs-directory))
+
+;; keybindings (general.el configuration)
+(load-file (expand-file-name "extras/keybindings.el" user-emacs-directory))
 
 ;; Vim-bindings in Emacs (evil-mode configuration)
 (load-file (expand-file-name "extras/vim-like.el" user-emacs-directory))
