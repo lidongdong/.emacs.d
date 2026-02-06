@@ -44,6 +44,7 @@
 
   (general-define-key
    :keymaps '(evil-motion-state-map)
+   "gd" 'xref-find-definitions
    "gr" 'xref-find-references)
 )
 
