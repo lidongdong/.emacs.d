@@ -33,7 +33,7 @@
     "SPC" nil  ; 清除默认绑定（如果有）
     "C-SPC" nil)
 
-  ;;
+  ;; esc代替ctrl+g退出minibuffer
   (general-define-key
    :keymaps '(minibuffer-local-map 
 	      minibuffer-local-ns-map
@@ -41,6 +41,10 @@
 	      minibuffer-local-must-match-map
 	      minibuffer-local-filename-completion-map)
    "<escape>" 'keyboard-escape-quit)
+
+  (general-define-key
+   :keymaps '(evil-motion-state-map)
+   "gr" 'xref-find-references)
 )
 
 ;; 使用 my-leader-def 定义所有键绑定

@@ -62,7 +62,11 @@
          )
   :config
   ;; Narrowing lets you restrict results to certain groups of candidates
-  (setq consult-narrow-key "<"))
+  (setq consult-narrow-key "<")
+
+  ;; 让 consult 处理 xref 结果
+  (setq xref-show-xrefs-function #'consult-xref
+	xref-show-definitions-function #'consult-xref))
 
 (use-package embark-consult
   :ensure t)
